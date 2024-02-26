@@ -1,0 +1,2 @@
+class AllEmp < ApplicationRecord
+end
