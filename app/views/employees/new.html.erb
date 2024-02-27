@@ -1,43 +1,42 @@
 <div class="col-lg-12">
 	<div class="card rounder-0 m-5">
 		<div class="card-body">
-			<h1 class="text-center text-danger">Employee New Data Insert.</h1>
+			<h1 class="text-center">Employees new data insert.</h1>
 		</div>
 	</div>
-	<%= form_with model: @emps do |form|%>
+	<%= form_with model: @employee do |form|%>
 		<div class="row">
 			<div class="col-lg-5 m-4">
 				<div class="form-group m-4">
-					<%= form.label :first_name,class:'mb-2'%>
-					<%= form.text_field :first_name, class:'form-control form-control-lg'%>
+					<%= form.label :first_name, class: 'mb-2'%>
+					<%= form.text_field :first_name, class: 'form-control form-control-lg'%>
 				</div>
 			</div>
 			<div class="col-lg-5 m-4">
 				<div class="form-group m-4">
-					<%= form.label :last_name,class:'mb-2'%>
-					<%= form.text_field :last_name, class:'form-control form-control-lg'%>
+					<%= form.label :last_name, class: 'mb-2'%>
+					<%= form.text_field :last_name, class: 'form-control form-control-lg'%>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-5 m-4">
 				<div class="form-group m-4">
-					<%= form.label :email,class:'mb-2'%>
-					<%= form.text_field :email, class:'form-control form-control-lg'%>
+					<%= form.label :email, class: 'mb-2'%>
+					<%= form.text_field :email, class: 'form-control form-control-lg'%>
 				</div>
 			</div>
 			<div class="col-lg-5 m-4">
 				<div class="form-group m-4">
-					<%= form.label :salary,class:'mb-2'%>
-					<%= form.text_field :salary, class:'form-control form-control-lg'%>
+					<%= form.label :salary, class: 'mb-2'%>
+					<%= form.text_field :salary, class: 'form-control form-control-lg'%>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-12 m-4">
 			<div class="form-group m-4">
-				<%#= form.submit class:'btn-lg btn-primary'%>
-				<input type="submit" name="commit" value="Create Employee" class="btn-lg btn-primary" data-disable-with="Create employee" />
-				<%= link_to "back to employee",allemp_path,class:"btn btn-outline-primary btn-lg"%>
+				<%= form.submit class:'btn-lg btn-primary' %>
+				<%= link_to "back to student", employees_path, class:"btn btn-outline-primary btn-lg"%>
 			</div>
 		</div>
 	<% end%>

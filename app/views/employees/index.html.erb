@@ -18,7 +18,7 @@
           <a class="nav-link" href="/services">SERVICES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="allemp">EMP_DATA</a>
+          <a class="nav-link" href="employees">EMP_DATA</a>
         </li>
         
           </ul>
@@ -28,33 +28,37 @@
   </div>
 </nav>
 
-<div class="container text-center">
-  <div class="card p-2">
-    <h1 class="text-danger">Employees Data</h1>
+<div class="card">
+
+  <div class="card-body">
+    <h1 class="text-center">Employee Data</h1>
   </div>
 
+<a href="/employees/new" class="btn btn-outline-primary col-lg-2 m-2">New Employee</a>
 
-
-  <div class="card mt-3">
+<div class="col-lg-12">
+  <div class="card-body">
     <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Salary</th>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Salary</th>
       </tr>
     </thead>
     <tbody>
-      <% @employees.each do |val|%>
+      <% @employees.each do |data|%>
       <tr>
-        <th scope="row"><%= val.id%></th>
-        <td><%= val.first_name%></td>
-        <td><%= val.email%></td>
-        <td><%= val.salary%></td>
+        <td><%= data.id%></td>
+        <td><%= data.name%></td>
+        <td><%= data.email%></td>
+        <td><%= data.salary%></td>
       </tr>
       <% end%>
     </tbody>
   </table>
   </div>
+</div>
+
 </div>

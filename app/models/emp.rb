@@ -1,2 +1,0 @@
-class Emp < ApplicationRecord
-end

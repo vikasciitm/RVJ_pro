@@ -1,23 +1,17 @@
-class EmployeesController < ApplicationController
-	def allemp
-		@employees=Emp.all
+class EmployeesController<ApplicationController
+	def index
+		@employees=Employee.all
 	end
-
 	def new
-		@emp=Emp.new
+		@employee=Employee.new
 	end
 
 	def create
-		@emp=Emp.new(first_name: params[:emp][:first_name],last_name: params[:emp][:last_name],email: params[:emp][:email],salary: params[:emp][:salary])
-		if @emp.save
-			redirect_to allemp_path
+		@employee=Employee.new(first_name: params[:employee][:first_name],last_name: params[:employee][:last_name],email: params[:employee][:email],salary: params[:employee][:salary])
+		if @employee.save
+			redirect_to employees_path
 		else
 			render :new
 		end
 	end
-
-	def show
-		@employee=Emp.find(params[:id])
-	end
-
 end
