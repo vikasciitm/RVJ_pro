@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @rvj %>
+
+<div>
+  <%= link_to "Edit this rvj", edit_rvj_path(@rvj) %> |
+  <%= link_to "Back to rvjs", rvjs_path %>
+
+  <%= button_to "Destroy this rvj", @rvj, method: :delete %>
+</div>

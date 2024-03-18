@@ -1,0 +1,2 @@
+class Rvj < ApplicationRecord
+end

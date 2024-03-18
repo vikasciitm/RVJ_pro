@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Rvjs</h1>
+
+<div id="rvjs">
+  <% @rvjs.each do |rvj| %>
+    <%= render rvj %>
+    <p>
+      <%= link_to "Show this rvj", rvj %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New rvj", new_rvj_path %>
